@@ -1,8 +1,19 @@
 import express from "express";
 import { createNewRecipe, deleteRecipe, updateRecipe, getRecipe, getAllRecipe } from "../Controllers/recipeController.js";
+import { LoginUser, createUser, getUsers } from "../Controllers/userController.js";
+import { protect } from "../middlewares/authMiddleware.js";
 import { body, validationResult } from 'express-validator';
 
 const router = express.Router();
+
+// USER REGISTER AND LOGIN
+
+router.post("/user", createUser);
+router.post("/user/login",  LoginUser);
+router.get("/users", getUsers);
+
+// ENDS
+
 
 // POST REQUEST
 router.post(
