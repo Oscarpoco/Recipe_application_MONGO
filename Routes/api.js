@@ -62,7 +62,7 @@ router.post(
 //   ENDS
 
 // GET REQUEST
-router.get("/recipes", protect, getAllRecipe);
+router.get("/recipes", getAllRecipe);
 
 // GET REQUEST USING ID
 router.get("/recipes/:id", protect, getRecipe);
