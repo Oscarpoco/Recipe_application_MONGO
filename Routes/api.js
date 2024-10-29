@@ -10,6 +10,8 @@ const router = express.Router();
 
 router.post("/user", createUser);
 router.post("/user/login",  LoginUser);
+
+// FOR DEBUGGING CASE
 router.get("/users", getUsers);
 
 // ENDS
@@ -54,21 +56,23 @@ router.post(
       }
       next();
     },
+    protect,
     createNewRecipe
   );
 //   ENDS
 
 // GET REQUEST
-router.get("/recipes", getAllRecipe);
+router.get("/recipes", protect, getAllRecipe);
 
 // GET REQUEST USING ID
-router.get("/recipes/:id", getRecipe);
+router.get("/recipes/:id", protect, getRecipe);
+
 
 // EDIT REQUEST
-router.put("/recipes/:id", updateRecipe);
+router.put("/recipes/:id", protect, updateRecipe);
 
 //  DELETE REQUEST
-router.delete("/recipes/:id", deleteRecipe);
+router.delete("/recipes/:id", protect, deleteRecipe);
 
 
 export default router;

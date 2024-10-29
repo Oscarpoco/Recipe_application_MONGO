@@ -27,7 +27,8 @@ export const createUser = async (req, res) => {
             res.status(400).json({message: "Failed to register the user, ", error});
         }
         else{
-            res.status(500).json({message: "Internal server error", error});
+            res.status(500).json({message: "Internal server error"});
+            console.error(error);
         }
         
     }
