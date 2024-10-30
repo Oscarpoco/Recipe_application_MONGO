@@ -4,7 +4,8 @@ import Recipe from "../models/recipe.js";
 // CREATE RECIPE
 const createRecipe = async (req, res) => {
     try {
-        const newRecipe = await Recipe.create(req.body);
+        const newRecipe = await Recipe.create(...req.body, userID = req.user._id);
+
         res.status(201).json(newRecipe);
     } catch (error) {
         res.status(500).json({ message: "Error creating recipe: " + error.message });

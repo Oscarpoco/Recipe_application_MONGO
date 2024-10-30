@@ -19,18 +19,12 @@ export const createUser = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const user = await User.create({ email, password: hashedPassword });
-        res.status(201).json({ id: user.id, email: user.email });
+        res.status(201).json({message: "User Successfully registered", id: user.id, email: user.email });
 
 
     } catch (error) {
-        if(error.name === "validationError"){
-            res.status(400).json({message: "Failed to register the user, ", error});
-        }
-        else{
-            res.status(500).json({message: "Internal server error"});
-            console.error(error);
-        }
-        
+        res.status(500).json({ message: "Internal server error" });
+        console.error(error);
     }
 
 
