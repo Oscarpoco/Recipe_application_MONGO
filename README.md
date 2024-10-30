@@ -1,9 +1,10 @@
-# Recipe API
+# Recipe API with Authentication and authorization
 
 A RESTful API for managing cooking recipes, built with Node.js, Express, and MongoDB.
 
 ## 🚀 Features
 
+- Register an account and Sign in to create your own recipes
 - Complete CRUD operations for recipes
 - Pagination support for recipe listings
 - Input validation and error handling
@@ -17,13 +18,14 @@ Before running this project, make sure you have:
 
 - Node.js (v14 or higher)
 - MongoDB
-- npm or yarn package manager
+- npm package manager
+- Nodemond package
 
 ## 🛠️ Installation
 
 1. Clone the repository:
 ```bash
-git clone oscarpoco/Recipe_application_MONGO
+git clone https://github.com/Oscarpoco/Recipe_application_MONGO/tree/recipe-application-MONGO-with-authentication-authorizing
 cd recipe-api
 ```
 
@@ -40,7 +42,7 @@ MONGO_URL=your_mongodb_connection_string
 
 4. Start the server:
 ```bash
-npx run dev
+npm run dev
 npx nodemond server.js
 ```
 
@@ -155,4 +157,5 @@ This project is under the premises of mLab CodeTribe
 
 - Express.js team
 - Mongoose team
+- Node.js team
 - All contributors
