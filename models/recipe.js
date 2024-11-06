@@ -6,7 +6,7 @@ const recipeSchema = new mongoose.Schema(
     // USERID
     userID: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'user',
         required: true,
     },
 

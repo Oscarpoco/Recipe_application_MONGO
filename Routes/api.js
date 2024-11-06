@@ -42,20 +42,20 @@ router.get("/users", getUsers);
 
 // POST REQUEST ROUTE
 router.post(
-    "/recipes",protect, createNewRecipe);
+    "/recipe",protect, createNewRecipe);
 // POST REQUEST ROUTE ENDS
 
 // GET REQUEST ROUTE 
 router.get("/recipes", getAllRecipe);
 
 // GET REQUEST USING ID ROUTE
-router.get("/recipes/:id", protect, getRecipe);
+router.get("/recipe/:id", protect, getRecipe);
 
 // EDIT REQUEST ROUTE
-router.put("/recipes/:id", protect, updateRecipe);
+router.put("/recipe/:id", protect, updateRecipe);
 
 //  DELETE REQUEST ROUTE
-router.delete("/recipes/:id", protect, deleteRecipe);
+router.delete("/recipe/:id", protect, deleteRecipe);
 
 
 export default router;
