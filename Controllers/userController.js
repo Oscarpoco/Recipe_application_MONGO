@@ -48,7 +48,7 @@ export const LoginUser = async(req, res)=>{
         }
 
         const UserToken = await  GenerateToken(fetchUser.id);
-        res.status(200).json({message:  "User logged in successfully with", id: User.id, email: User.email, token: UserToken});
+        res.status(200).json({message:  "User logged in successfully with", id: fetchUser.id, email: fetchUser.email, token: UserToken});
 
     } catch (error) {
         res.status(500).json({error: "Internal server error"});
