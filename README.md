@@ -25,8 +25,8 @@ Before running this project, make sure you have:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Oscarpoco/Recipe_application_MONGO/tree/recipe-application-MONGO-with-authentication-authorizing
-cd recipe-api
+git clone https://github.com/Oscarpoco/Recipe_application_MONGO.git
+cd Recipe_application_MONGO
 ```
 
 2. Install dependencies:
@@ -52,11 +52,11 @@ npx nodemond server.js
 
 | Method | Endpoint               | Description                       |
 |--------|------------------------|-----------------------------------|
-| POST   | `/api/v1/recipes`      | Create a new recipe               |
+| POST   | `/api/v1/recipe`      | Create a new recipe               |
 | GET    | `/api/v1/recipes`      | Get all recipes (with pagination) |
-| GET    | `/api/v1/recipes/:id`  | Get a specific recipe             |
-| PUT    | `/api/v1/recipes/:id`  | Update a recipe                   |
-| DELETE | `/api/v1/recipes/:id`  | Delete a recipe                   |
+| GET    | `/api/v1/recipe/:id`  | Get a specific recipe             |
+| PUT    | `/api/v1/recipe/:id`  | Update a recipe                   |
+| DELETE | `/api/v1/recipe/:id`  | Delete a recipe                   |
 
 ### Query Parameters
 
